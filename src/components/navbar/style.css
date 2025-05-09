@@ -1,0 +1,51 @@
+.buy-button {
+    background-color: var(--verde-claro-banese);
+    color: white !important;
+    padding: 8px 20px !important;
+    border-radius: 30px;
+    font-weight: 700 !important;
+    margin-left: 10px;
+    transition: all 0.3s ease;
+  }
+  
+  .donate-link:hover {
+    transform: scale(1.05);
+    color: var(--second-color) !important;
+  }
+  
+  .donate-link::after {
+    display: none !important; /* Remove o sublinhado */
+  }
+  
+  @media (max-width: 768px) {
+    .donate-link {
+      margin-left: 0;
+      margin-top: 10px;
+      display: inline-block;
+      width: auto;
+    }
+  
+    .pibaflogo {
+      height: 50px !important; /* Apliquei o !important para garantir que o estilo seja aplicado */
+    }
+  }
+  
+  /* Efeito de pulsação para chamar atenção */
+  @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.010); }
+    100% { transform: scale(1); }
+  }
+  
+  .donate-link {
+    animation: pulse 2s infinite;
+  }
+  
+  .pibaflogo {
+    height: 65px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+  }
+  

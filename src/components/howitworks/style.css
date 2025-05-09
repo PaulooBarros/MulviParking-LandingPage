@@ -1,0 +1,162 @@
+/* Estilos base */
+.how-it-works {
+  background-color: var(--branco-gelo);
+  padding: 7rem 2rem;
+  color: var(--preto-mulvi);
+  /* max-width: 1200px; */
+  margin: 0 auto;
+}
+
+.section-title {
+  color: var(--verde-banese);
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.section-description {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+/* Container dos módulos */
+.modules-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+/* Cards dos módulos */
+.module-card {
+  flex: 1;
+  min-width: 300px;
+  max-width: 450px;
+  background: white;
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  position: relative; /* Necessário para o posicionamento do after */
+  overflow: hidden; /* Para conter o efeito */
+}
+
+.module-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Cabeçalho do módulo */
+.module-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid var(--verde-banese);
+}
+
+.module-header h3 {
+  margin: 0;
+  font-size: 1.8rem;
+  color: var(--verde-banese);
+}
+
+.module-header .material-icons {
+  font-size: 2.5rem;
+  color: var(--verde-banese);
+}
+
+/* Lista de features */
+.module-features {
+  list-style: none;
+  padding: 0;
+}
+
+.module-features li {
+  margin-bottom: 1.5rem;
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  line-height: 1.5;
+}
+
+.module-features .material-icons {
+  color: var(--verde-banese);
+  font-size: 1.5rem;
+  margin-top: 0.2rem;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .modules-container {
+    flex-direction: column;
+  }
+
+  .module-card {
+    max-width: 100%;
+  }
+}
+
+.module-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background-color: var(--verde-claro-banese);
+  transform: translateY(-100%);
+  transition: transform 0.3s ease;
+}
+
+.module-card:hover::after {
+  transform: translateY(0);
+}
+
+/* 
+.module-card:hover::after {
+  height: 8px;
+  background-color: var(--verde-claro-banese);
+} */
+
+/* Efeito de carregamento */
+.how-it-works.loading {
+  position: relative;
+  min-height: 300px;
+}
+
+.loading-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--branco-base);
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeOut 0.5s ease-out 0.3s forwards;
+}
+
+.loading-overlay::after {
+  content: "";
+  width: 50px;
+  height: 50px;
+  border: 4px solid var(--verde-claro-banese);
+  border-top-color: var(--verde-banese);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes fadeOut {
+  to { opacity: 0; visibility: hidden; }
+}
