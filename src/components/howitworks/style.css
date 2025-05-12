@@ -1,6 +1,7 @@
 /* Estilos base */
 .how-it-works {
   background-color: var(--branco-gelo);
+  /* background: url(../../assets/planodefundobola.svg); */
   padding: 7rem 2rem;
   color: var(--preto-mulvi);
   /* max-width: 1200px; */
@@ -20,6 +21,7 @@
   margin: 0 auto 3rem;
   font-size: 1.2rem;
   line-height: 1.6;
+  font-weight: 600;
 }
 
 /* Container dos módulos */
@@ -27,7 +29,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 2rem;
+  gap: 5rem;
   margin-top: 2rem;
 }
 
@@ -56,7 +58,7 @@
   gap: 1rem;
   margin-bottom: 1.5rem;
   padding-bottom: 1rem;
-  border-bottom: 2px solid var(--verde-banese);
+  border-bottom: 2px solid var(--verde-claro-banese);
 }
 
 .module-header h3 {
@@ -82,6 +84,7 @@
   gap: 1rem;
   align-items: flex-start;
   line-height: 1.5;
+  font-weight: bold;
 }
 
 .module-features .material-icons {

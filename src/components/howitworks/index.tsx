@@ -1,14 +1,16 @@
-import React from 'react';
-import './style.css';
+import React from "react";
+import "./style.css";
 
 const HowItWorks: React.FC = () => {
   return (
     <section className="how-it-works">
+      <div className="background-sphere sphere-1"></div>
+      <div className="background-sphere sphere-2"></div>
       <h2 className="section-title">Como funciona o Mulvi Parking?</h2>
       <p className="section-description">
         O Mulvi Parking é dividido em duas aplicações integradas:
       </p>
-      
+
       <div className="modules-container">
         {/* Módulo Admin */}
         <div className="module-card admin-module">
@@ -19,11 +21,11 @@ const HowItWorks: React.FC = () => {
           <ul className="module-features">
             <li>
               <span className="material-icons">group</span>
-              Gestão de usuários com diferentes permissões (administradores e recepcionistas)
+              Gestão de usuários
             </li>
             <li>
               <span className="material-icons">login</span>
-              Acesso seguro, com login via validação de e-mail
+              Acesso seguro com autenticação
             </li>
             <li>
               <span className="material-icons">devices</span>
@@ -40,7 +42,7 @@ const HowItWorks: React.FC = () => {
           </div>
           <ul className="module-features">
             <li>
-              <span className="material-icons">ev_station</span>
+              <span className="material-icons">app_registration</span>
               Cadastro de veículos por placa
             </li>
             <li>

@@ -1,0 +1,121 @@
+/* Estilos base */
+.benefits-section {
+    background-color: var(--branco-base2);
+    padding: 7rem 2rem;
+    color: var(--preto-mulvi);
+  }
+  
+  .benefits-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .benefits-title {
+    color: var(--verde-banese);
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    position: relative;
+  }
+  
+  .benefits-title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    width: 52%;
+    background-color: var(--verde-claro-banese);
+    margin: 1rem auto 0;
+  }
+  
+  /* Grid de benefícios */
+  .benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  /* Cards de benefícios */
+ .benefit-card {
+  background: white;
+  border-radius: 10px;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  position: relative; /* Adicionado para posicionamento absoluto do ::after */
+  overflow: hidden; /* Para conter o pseudo-elemento */
+}
+
+.benefit-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* Ocupa toda a largura */
+  height: 5px; /* Altura da barra superior */
+  background-color: var(--verde-claro-banese); /* Cor mais destacada */
+  transform: translateY(-100%); /* Inicia escondido */
+  transition: transform 0.3s ease;
+}
+
+.benefit-card:hover {
+  transform: scale(1.05); /* Aumenta o tamanho no hover */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1); /* Adiciona um efeito de sombra */
+}
+
+.benefit-card:hover::after {
+  transform: translateY(0); /* Mostra a barra no hover */
+}
+  /* .benefit-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  } */
+  
+  .benefit-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--branco-gelo);
+    border-radius: 50%;
+    color: var(--verde-banese);
+  }
+  
+  .benefit-icon .material-icons {
+    font-size: 2.5rem;
+  }
+  
+  .benefit-title {
+    color: var(--verde-banese);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+  
+  .benefit-description {
+    color: var(--preto-mulvi);
+    line-height: 1.6;
+    margin: 0;
+  }
+  
+  /* Responsivo */
+  @media (max-width: 768px) {
+    .benefits-section {
+      padding: 3rem 1rem;
+    }
+    
+    .benefits-title {
+      font-size: 2rem;
+    }
+    
+    .benefits-grid {
+      grid-template-columns: 1fr;
+      max-width: 400px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }

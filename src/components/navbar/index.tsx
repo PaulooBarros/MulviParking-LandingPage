@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-scroll";
 import "./style.css";
- import logo from "../../assets/banesecard-logo.svg";
-
+import logo from "../../assets/banesecard-logo.svg";
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -23,7 +22,7 @@ const Navbar: React.FC = () => {
             }}
           >
             <img
-              src={logo}// Substitua com o caminho da imagem
+              src={logo} // Substitua com o caminho da imagem
               alt="PIB Augusto Franco"
               className="pibaflogo"
             />
@@ -40,29 +39,22 @@ const Navbar: React.FC = () => {
             Como Funciona
           </Link>
           <Link
-            to="Admin"
+            to="benefits-section"
             smooth={true}
-            duration={100}
-            onClick={() => setIsOpen(false)}
-          >
-            Aplicação
-          </Link>
-          <Link
-            to="Beneficios"
-            smooth={true}
-            duration={100}
+            duration={800}
             onClick={() => setIsOpen(false)}
           >
             Benefícios
           </Link>
           <Link
-            to="Depoimentos"
+            to="admin-section"
             smooth={true}
-            duration={100}
+            duration={800}
             onClick={() => setIsOpen(false)}
           >
-            Depoimentos
+            Aplicação
           </Link>
+
           <Link
             to="cta-section"
             smooth={true}

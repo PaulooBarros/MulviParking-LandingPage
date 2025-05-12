@@ -1,15 +1,16 @@
 import React from "react";
 import "./style.css";
 import EstacionamentoImage from "../../assets/estacionamento-amarelo.svg";
-
+import { Link } from "react-scroll"; 
 const HeroSection: React.FC = () => {
   return (
     <section className="hero">
       <div className="container hero-flex">
 
-      <div className="hero-image">
+        <div className="hero-image">
           <img src={EstacionamentoImage} alt="Estacionamento" />
         </div>
+
         {/* Texto */}
         <div className="hero-content">
           <h1>MULVI PARKING</h1>
@@ -18,16 +19,17 @@ const HeroSection: React.FC = () => {
           </p>
 
           <div className="hero-buttons">
-            <a
-              href="#contato"
+            <Link
+              to="cta-section"
+              smooth={true}
+              duration={2000}
               className="btn btn-outline"
-              target="_blank"
-              rel="noopener noreferrer"
             >
               Entre em Contato
-            </a>
+            </Link>
           </div>
-        </div>        
+        </div>
+        
       </div>
     </section>
   );
