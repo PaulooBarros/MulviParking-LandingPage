@@ -1,54 +1,39 @@
-# React + TypeScript + Vite
+# 🚗 MulviParking — Landing Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Esta é a **Landing Page** do **MulviParking**, um projeto focado em **gestão de estacionamentos**.
+A página foi criada para apresentar as funcionalidades do sistema e captar novos clientes interessados em otimizar a administração de seus estacionamentos.
 
-Currently, two official plugins are available:
+## 🎯 Objetivo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+A landing page tem como finalidade:
 
-## Expanding the ESLint configuration
+* Apresentar o **MulviParking** de forma clara e objetiva.
+* Destacar as principais **funcionalidades e benefícios** do sistema.
+* Captar leads por meio de **formulários de contato**.
+* Direcionar potenciais clientes para **solicitar uma demonstração** ou entrar em contato com a equipe comercial.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## ✨ Funcionalidades da Landing Page
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+* Design **moderno e responsivo**.
+* Seções explicativas sobre o **projeto** e suas **vantagens**.
+* Formulário para **cadastro de interesse**.
+* Links de contato direto (WhatsApp, E-mail ou Telefone).
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🛠️ Tecnologias Utilizadas
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+* **Front-end:** React com TypeScript
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+## 📂 Estrutura
+
+* `public/` — Arquivos estáticos
+* `src/` — Componentes da landing page
+* `assets/` — Imagens e recursos visuais
+
+## 📫 Contato
+
+Landing Page desenvolvida por **Paulo Gustavo Angelo de Barros**
+
+* 💼 [LinkedIn](https://www.linkedin.com/in/paulo-barros-149146235/)
+* 📧 [Email](mailto:paulogustavobarros90@gmail.com)
+
+---
